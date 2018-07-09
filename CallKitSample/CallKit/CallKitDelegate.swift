@@ -33,12 +33,6 @@ class CallKitDelegate: NSObject {
         update.hasVideo = true
         self.uuid = UUID()
         self.provider?.reportNewIncomingCall(with: self.uuid!, update: update) { (error) in
-            if error != nil {
-                print(error)
-            }
-            else {
-                print("call reported")
-            }
             completionHandler()
         }
     }
@@ -47,13 +41,10 @@ class CallKitDelegate: NSObject {
         let endCallAction = CXEndCallAction(call: self.uuid!)
         let transaction = CXTransaction(action: endCallAction)
         CXCallController().request(transaction) { (error) in
-            if let error = error {
-                print("EndCallAction transaction request failed: \(error.localizedDescription).")
+            if let _ = error {
                 self.provider?.reportCall(with: self.uuid!, endedAt: Date(), reason: .remoteEnded)
                 return
             }
-            
-            print("EndCallAction transaction request successful")
         }
     }
     
