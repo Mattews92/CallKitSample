@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxY-aI-cAK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ringer View Controller-->
+        <scene sceneID="GZB-Kq-Jon">
+            <objects>
+                <viewController storyboardIdentifier="RingerViewController" id="cxY-aI-cAK" customClass="RingerViewController" customModule="Swift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XFT-aq-jHW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videocallBG" translatesAutoresizingMaskIntoConstraints="NO" id="fT4-gC-hw7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9j-11-Hcb">
+                                <rect key="frame" x="207.5" y="582" width="127.5" height="45"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.59607843140000005" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PBF-NT-0aX"/>
+                                </constraints>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-tT-m4u">
+                                <rect key="frame" x="40" y="582" width="127.5" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.067913395279999997" blue="0.090223754239999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4GZ-1M-dRu"/>
+                                </constraints>
+                                <state key="normal" title="Reject">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KbW-PK-ft9" firstAttribute="bottom" secondItem="qzR-tT-m4u" secondAttribute="bottom" constant="40" id="6yk-uC-S7v"/>
+                            <constraint firstItem="fT4-gC-hw7" firstAttribute="top" secondItem="XFT-aq-jHW" secondAttribute="top" id="9ig-9d-BTw"/>
+                            <constraint firstItem="KbW-PK-ft9" firstAttribute="trailing" secondItem="l9j-11-Hcb" secondAttribute="trailing" constant="40" id="HTy-1O-5aO"/>
+                            <constraint firstItem="l9j-11-Hcb" firstAttribute="leading" secondItem="qzR-tT-m4u" secondAttribute="trailing" constant="40" id="Sxe-NA-8Fx"/>
+                            <constraint firstItem="KbW-PK-ft9" firstAttribute="bottom" secondItem="fT4-gC-hw7" secondAttribute="bottom" id="eeZ-56-G7p"/>
+                            <constraint firstItem="qzR-tT-m4u" firstAttribute="leading" secondItem="KbW-PK-ft9" secondAttribute="leading" constant="40" id="jfd-0m-qC0"/>
+                            <constraint firstItem="KbW-PK-ft9" firstAttribute="trailing" secondItem="fT4-gC-hw7" secondAttribute="trailing" id="ng0-EM-0cB"/>
+                            <constraint firstItem="l9j-11-Hcb" firstAttribute="width" secondItem="qzR-tT-m4u" secondAttribute="width" id="rPJ-rv-rwA"/>
+                            <constraint firstItem="KbW-PK-ft9" firstAttribute="bottom" secondItem="l9j-11-Hcb" secondAttribute="bottom" constant="40" id="tFU-Aw-c2I"/>
+                            <constraint firstItem="fT4-gC-hw7" firstAttribute="leading" secondItem="KbW-PK-ft9" secondAttribute="leading" id="yA9-Fx-QEX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KbW-PK-ft9"/>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="l9j-11-Hcb" id="FKm-Oc-p2O"/>
+                        <outlet property="rejectButton" destination="qzR-tT-m4u" id="XY4-SK-cHQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rF0-OC-Poz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="-21.139430284857571"/>
+        </scene>
+        <!--Video Call View Controller-->
+        <scene sceneID="Tpe-aX-let">
+            <objects>
+                <viewController storyboardIdentifier="VideoCallViewController" id="Jp9-gv-5RI" customClass="VideoCallViewController" customModule="Swift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DgJ-eF-gjc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videocallBG" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-qx-voa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="mct-Sz-TuF">
+                                <rect key="frame" x="270" y="25" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8Hc-3i-FIa"/>
+                                    <constraint firstAttribute="width" constant="80" id="MlF-iu-Vvi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-Pj-PnS">
+                                <rect key="frame" x="122.5" y="577" width="130" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-g4-fYp">
+                                        <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Y9y-DY-zQ8"/>
+                                            <constraint firstAttribute="height" constant="50" id="mUH-Tx-fCq"/>
+                                        </constraints>
+                                        <state key="normal" image="chat"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhB-tk-tTm">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fwY-h3-iYU"/>
+                                            <constraint firstAttribute="width" constant="50" id="k8f-3t-zfU"/>
+                                        </constraints>
+                                        <state key="normal" image="video"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GNe-g4-fYp" firstAttribute="leading" secondItem="qhB-tk-tTm" secondAttribute="trailing" constant="30" id="0le-in-Q1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="qhB-tk-tTm" secondAttribute="bottom" id="D0x-ay-2is"/>
+                                    <constraint firstAttribute="bottom" secondItem="GNe-g4-fYp" secondAttribute="bottom" id="KFz-8X-80b"/>
+                                    <constraint firstAttribute="trailing" secondItem="GNe-g4-fYp" secondAttribute="trailing" id="Unm-qa-UYz"/>
+                                    <constraint firstItem="qhB-tk-tTm" firstAttribute="top" secondItem="kb4-Pj-PnS" secondAttribute="top" id="oef-dV-b21"/>
+                                    <constraint firstItem="qhB-tk-tTm" firstAttribute="leading" secondItem="kb4-Pj-PnS" secondAttribute="leading" id="trq-Nb-Gbh"/>
+                                    <constraint firstItem="GNe-g4-fYp" firstAttribute="top" secondItem="kb4-Pj-PnS" secondAttribute="top" id="yVu-VW-Hk9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sVA-Z0-GDY" firstAttribute="bottom" secondItem="kb4-Pj-PnS" secondAttribute="bottom" constant="40" id="2UX-W1-SKF"/>
+                            <constraint firstItem="sVA-Z0-GDY" firstAttribute="bottom" secondItem="jm2-qx-voa" secondAttribute="bottom" id="QDa-17-y7B"/>
+                            <constraint firstItem="jm2-qx-voa" firstAttribute="leading" secondItem="sVA-Z0-GDY" secondAttribute="leading" id="Vqd-hi-SmM"/>
+                            <constraint firstAttribute="trailing" secondItem="mct-Sz-TuF" secondAttribute="trailing" constant="25" id="W8C-jT-180"/>
+                            <constraint firstItem="kb4-Pj-PnS" firstAttribute="centerX" secondItem="DgJ-eF-gjc" secondAttribute="centerX" id="iMe-7z-H8n"/>
+                            <constraint firstItem="mct-Sz-TuF" firstAttribute="top" secondItem="DgJ-eF-gjc" secondAttribute="top" constant="25" id="qMS-pa-Nki"/>
+                            <constraint firstItem="sVA-Z0-GDY" firstAttribute="trailing" secondItem="jm2-qx-voa" secondAttribute="trailing" id="rRS-fs-1tf"/>
+                            <constraint firstItem="jm2-qx-voa" firstAttribute="top" secondItem="DgJ-eF-gjc" secondAttribute="top" id="tpA-E5-YrR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sVA-Z0-GDY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNP-jx-rfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="-21.139430284857571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat" width="19" height="19"/>
+        <image name="profile" width="100" height="100"/>
+        <image name="video" width="22" height="13"/>
+        <image name="videocallBG" width="301" height="389"/>
+    </resources>
+</document>
